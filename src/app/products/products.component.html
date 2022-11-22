@@ -1,0 +1,30 @@
+<table class="table table-striped-columns" *ngIf="products.length > 0">
+    <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let product of products ">
+          <th scope="row">{{product.id}}</th>
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.cost}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="clickDetail(product.id)">Detay</button></td>    
+        </tr>
+        <!-- <tr>
+          <th scope="row">2</th>
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.cost}}</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr> -->
+      </tbody>
+  </table>
